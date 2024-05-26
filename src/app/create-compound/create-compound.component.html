@@ -1,0 +1,31 @@
+<div class="compound-add-container">
+  <mat-card>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="newCompound.CompoundName" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input matInput [(ngModel)]="newCompound.strImageSource" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image Attribution</mat-label>
+      <input matInput [(ngModel)]="newCompound.strImageAttribution" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="newCompound.CompoundDescription"
+      ></textarea>
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="saveCompound()">
+        Save
+      </button>
+      <button mat-raised-button color="warn" (click)="cancelChanges()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

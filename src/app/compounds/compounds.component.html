@@ -1,0 +1,39 @@
+<div class="compounds-container">
+  <div class="btn-div">
+    <button
+      mat-raised-button
+      color="secondary"
+      (click)="goToAddCompound()"
+      *ngIf="isAdmin"
+    >
+      + Add
+    </button>
+    <button
+      mat-raised-button
+      color="secondary"
+      (click)="goToAdminPanel()"
+      *ngIf="isAdmin"
+    >
+      Admin Panel
+    </button>
+    <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+  </div>
+  <br />
+  <mat-card
+    *ngFor="let compound of compounds"
+    (click)="goToDetails(compound.id)"
+  >
+    <img
+      mat-card-image
+      [src]="compound.strImageSource"
+      alt="{{ compound.CompoundName }}"
+    />
+    <mat-card-title>{{ compound.CompoundName }}</mat-card-title>
+  </mat-card>
+</div>
+
+<app-pagination
+  [totalItems]="totalItems"
+  [itemsPerPage]="pageSize"
+  (pageChange)="onChange($event)"
+></app-pagination>

@@ -1,0 +1,23 @@
+.compound-details-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+mat-card {
+  width: 600px;
+}
+
+mat-card img {
+  height: 300px;
+  object-fit: scale-down;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,24 @@
+<div class="pagination-container">
+  <button
+    mat-button
+    (click)="setPage(currentPage - 1)"
+    [disabled]="currentPage === 1"
+  >
+    Previous
+  </button>
+  <button
+    mat-button
+    *ngFor="let page of pages"
+    (click)="setPage(page)"
+    [class.active]="page === currentPage"
+  >
+    {{ page }}
+  </button>
+  <button
+    mat-button
+    (click)="setPage(currentPage + 1)"
+    [disabled]="currentPage === totalPages"
+  >
+    Next
+  </button>
+</div>

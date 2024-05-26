@@ -1,0 +1,13 @@
+<div class="user-list">
+  <mat-card class="user-card" *ngFor="let user of users">
+    <mat-card-content>
+      <h3>{{ user.username }}</h3>
+      <p>Admin: {{ user.isAdmin }}</p>
+    </mat-card-content>
+    <mat-card-actions *ngIf="!user.isAdmin">
+      <button mat-button color="primary" (click)="promoteToAdmin(user.id)">
+        Promote to Admin
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

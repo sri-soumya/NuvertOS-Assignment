@@ -1,0 +1,21 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card {
+  margin: 10px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-content {
+  padding: 16px;
+}
+
+mat-card-actions {
+  justify-content: flex-end;
+  padding: 0 16px 16px 16px;
+}
